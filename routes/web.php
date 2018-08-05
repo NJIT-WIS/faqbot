@@ -24,6 +24,8 @@ Route::get('widget', 'BotManController@widget');
 Route::match(['get', 'post'], '/botman', 'BotManController@handle');
 Route::get('/botman/tinker', 'BotManController@tinker')->name('tinker');
 
+Route::get('/faqbot', 'FaqBotController@index');
+
 
 /* ************* Routes for home page *********************************
 Here is where you can register web routes for your Initial Page. */

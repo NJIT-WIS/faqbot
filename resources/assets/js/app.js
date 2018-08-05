@@ -1,23 +1,24 @@
+import Vuetify from "vuetify";
+import "vuetify/dist/vuetify.min.css";
+import "material-design-icons-iconfont/dist/material-design-icons.css";
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+import FaqBot from "./components/FaqBot/FaqBot.vue";
 
-require('./bootstrap');
+require("./bootstrap");
 
-window.Vue = require('vue');
+window.Vue = require("vue");
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+Vue.use(Vuetify);
 
-import {TinkerComponent} from 'botman-tinker';
-Vue.component('botman-tinker', TinkerComponent);
+Vue.component("faqbot", FaqBot);
+
+// QUESTIONS
+Vue.component(
+  "questions",
+  require("./components/Vuetify/Questions/Questions.vue")
+);
+Vue.component("list", require("./components/Vuetify/Questions/List.vue"));
 
 const app = new Vue({
-    el: '#app'
+  el: "#app"
 });

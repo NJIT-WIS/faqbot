@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:prettier/recommended",
+    "plugin:vue/essential"
+  ],
+  "globals": {
+    "axios": true
+  },
+  "rules": {
+    "no-console": "off"
+  }
+}
